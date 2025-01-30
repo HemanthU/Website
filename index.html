@@ -1,47 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore [Place Name]</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourist Destination</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html { margin: 0; padding: 0; font-family: 'Roboto', sans-serif; }
+    .background { 
+      position: fixed; top: 0; left: 0; height: 100%; width: 100%;
+      background-image: url('your-image.jpg'); 
+      background-size: cover; 
+      background-position: center; 
+      filter: brightness(60%);
+    }
+    .content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+    .text-box {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 20px;
+      max-width: 400px;
+      width: 100%;
+      border-radius: 8px;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 15px; }
+    p { font-size: 1rem; margin-bottom: 15px; line-height: 1.5; }
+    .cta-button {
+      background-color: #FF6347; /* Tomato color */
+      padding: 12px 20px;
+      color: white;
+      border: none;
+      font-size: 1.2rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .cta-button:hover { background-color: #e5533a; }
+  </style>
 </head>
 <body>
-    <!-- Homepage Section -->
-    <header class="hero-section">
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Things to Do</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero-content">
-            <h1>Experience the magic of [Place Name]</h1>
-            <a href="#explore" class="cta-button">Explore</a>
-        </div>
-    </header>
-
-    <!-- Things to Do Section -->
-    <section id="explore" class="things-to-do">
-        <h2>Things to Do</h2>
-        <div class="activities">
-            <div class="activity">
-                <img src="activity1.jpg" alt="Activity 1">
-                <h3>Activity 1</h3>
-                <p>A brief description of this activity.</p>
-            </div>
-            <div class="activity">
-                <img src="activity2.jpg" alt="Activity 2">
-                <h3>Activity 2</h3>
-                <p>A brief description of this activity.</p>
-            </div>
-            <!-- Add more activities here -->
-        </div>
-    </section>
-
-    <!-- Footer Section -->
+  <div class="background"></div>
+  <div class="content">
+    <div class="text-box">
+      <h1>Beautiful Destination</h1>
+      <p>Discover the beauty of this stunning place. Explore its attractions, rich culture, and amazing history. A must-see destination!</p>
+      <p><strong>Top Attractions:</strong></p>
+      <ul>
+        <li>Famous Landmark</li>
+        <li>Natural Wonders</li>
+        <li>Rich History</li>
+      </ul>
+      <button class="cta-button">Plan Your Trip</button>
+    </div>
+  </div>
+<!-- Footer Section -->
     <footer class="footer">
         <p>Follow us on:</p>
         <ul>
