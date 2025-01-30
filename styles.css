@@ -1,83 +1,159 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header {
-    background: #3498db;
-    padding: 15px;
-    color: white;
+/* Body and HTML setup */
+body, html {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  background-color: #f4f4f4; /* Default background color */
+}
+
+/* Fullscreen background */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url('your-image.jpg'); /* Replace with your own image */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(60%); /* Darkens the image for better text visibility */
+  z-index: -1; /* Ensure the background is behind the content */
+}
+
+/* Main content container */
+.content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Text Box Container */
+.text-box {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  padding: 20px;
+  max-width: 400px; /* Maximum width for readability */
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Title styling */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+/* Paragraph styling */
+p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* List of attractions */
+ul {
+  margin-bottom: 15px;
+}
+
+ul li {
+  font-size: 1rem;
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Call-to-action Button */
+.cta-button {
+  background-color: #FF6347; /* Tomato color */
+  padding: 12px 20px;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.cta-button:hover {
+  background-color: #e5533a;
+}
+
+/* Navigation bar (optional, if you add it) */
+nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+  font-size: 1rem;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.hero {
-    background: url('travel.jpg') center/cover no-repeat;
-    color: white;
-    padding: 100px 20px;
+nav a:hover {
+  color: #FF6347;
 }
 
-.container {
-    padding: 50px 20px;
-}
-
-.destinations {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: white;
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .content {
+    justify-content: center; /* Center the text box on smaller screens */
     padding: 20px;
-    margin: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 250px;
-}
+  }
 
-.card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.contact-form {
-    background: #f4f4f4;
-    padding: 50px 20px;
-}
-
-form input, form textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-button {
-    background: #3498db;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-footer {
-    background: #222;
-    color: white;
+  .text-box {
+    max-width: 100%;
     padding: 15px;
-    margin-top: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    padding: 8px 12px;
+    font-size: 1rem;
+  }
+
+  ul li {
+    font-size: 0.9rem;
+  }
 }
