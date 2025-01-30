@@ -9,10 +9,10 @@
 body, html {
   font-family: 'Roboto', sans-serif;
   height: 100%;
-  background-color: #f4f4f4; /* Default background color */
+  background-color: #f4f4f4; /* Light background color for text sections */
 }
 
-/* Fullscreen background */
+/* Fullscreen background image for Hero Section */
 .background {
   position: fixed;
   top: 0;
@@ -26,105 +26,216 @@ body, html {
   z-index: -1; /* Ensure the background is behind the content */
 }
 
-/* Main content container */
-.content {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100vh;
-  padding: 20px;
-}
-
-/* Text Box Container */
-.text-box {
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  color: white;
-  padding: 20px;
-  max-width: 400px; /* Maximum width for readability */
+/* Header Navigation Bar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  border-radius: 8px;
-}
-
-/* Title styling */
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-
-/* Paragraph styling */
-p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  line-height: 1.5;
-  font-weight: 400;
-}
-
-/* List of attractions */
-ul {
-  margin-bottom: 15px;
-}
-
-ul li {
-  font-size: 1rem;
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-/* Call-to-action Button */
-.cta-button {
-  background-color: #FF6347; /* Tomato color */
-  padding: 12px 20px;
-  color: white;
-  border: none;
-  font-size: 1.2rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-/* Button Hover Effect */
-.cta-button:hover {
-  background-color: #e5533a;
-}
-
-/* Navigation bar (optional, if you add it) */
-nav {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 10;
+  padding: 15px 0;
 }
 
 nav ul {
   display: flex;
+  justify-content: center;
+  gap: 30px;
   list-style: none;
-  gap: 20px;
 }
 
 nav ul li {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 nav a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
+  color: #FF6347; /* Highlight color on hover */
+}
+
+/* Hero Section - Main Banner */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.text-box {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.cta-button {
+  background-color: #FF6347; /* Tomato color */
+  padding: 15px 25px;
+  color: white;
+  border: none;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e5533a;
+}
+
+/* Attractions Section */
+.attractions {
+  background-color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.attractions h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.attractions ul {
+  list-style: none;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.attractions ul li {
+  margin-bottom: 15px;
+}
+
+/* Gallery Section */
+.gallery {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.gallery-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery-images img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+.contact {
+  background-color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.contact a {
+  color: #FF6347;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Section */
+footer {
+  background-color: #222;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+footer .social-media {
+  margin-top: 10px;
+}
+
+footer .social-media a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+footer .social-media a:hover {
   color: #FF6347;
 }
 
-/* Mobile responsiveness */
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .content {
-    justify-content: center; /* Center the text box on smaller screens */
+  .hero .text-box {
+    max-width: 100%;
     padding: 20px;
   }
 
-  .text-box {
+  .cta-button {
+    font-size: 1.1rem;
+    padding: 12px 20px;
+  }
+
+  .attractions h2, .gallery h2, .contact h2 {
+    font-size: 2rem;
+  }
+
+  .gallery-images {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .social-media a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero .text-box {
     max-width: 100%;
     padding: 15px;
   }
@@ -133,27 +244,24 @@ nav a:hover {
     font-size: 2rem;
   }
 
-  .cta-button {
-    padding: 10px 15px;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-
   p {
-    font-size: 0.9rem;
-  }
-
-  .cta-button {
-    padding: 8px 12px;
     font-size: 1rem;
   }
 
-  ul li {
-    font-size: 0.9rem;
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  .attractions ul li {
+    font-size: 1rem;
+  }
+
+  .gallery-images {
+    grid-template-columns: 1fr;
+  }
+
+  footer .social-media a {
+    font-size: 1rem;
   }
 }
