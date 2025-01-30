@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Explore The World</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Discover Breathtaking Places</h2>
+        <p>Your ultimate travel guide to the world's best destinations.</p>
+    </section>
+
+    <section id="destinations" class="container">
+        <h2>Top Destinations</h2>
+        <div class="destinations">
+            <div class="card">
+                <img src="paris.jpg" alt="Paris">
+                <h3>Paris, France</h3>
+                <p>Experience the romance and culture of the City of Lights.</p>
+            </div>
+            <div class="card">
+                <img src="bali.jpg" alt="Bali">
+                <h3>Bali, Indonesia</h3>
+                <p>Enjoy tropical beaches, lush forests, and vibrant culture.</p>
+            </div>
+            <div class="card">
+                <img src="newyork.jpg" alt="New York">
+                <h3>New York, USA</h3>
+                <p>The city that never sleeps awaits your adventure.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="tourismForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tourism Guide. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
